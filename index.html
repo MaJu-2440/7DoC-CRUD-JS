@@ -4,23 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8b81291940.js" crossorigin="anonymous"></script>
     <title>Formulário CRUD</title>
 </head>
 <body>
-    <h1 class="titulo">Cadastro de pessoas</h1>
+    <header>
+        <h1 class="titulo">Cadastro de pessoas</h1>
+        <p class="descricao">Este site foi feito com o objetivo de aplicar meus conhecimentos de CRUD com Javascript</p>
+    </header>
+    
+    <main>
+        <form class="form js-form">
+            <label for="nome">Nome
+                <input class="form-field js-field" type="text" name="nome" id="nome" maxlength="120" minlength="3" pattern="([aA-zZ ]+)" placeholder="Digite o nome da pessoa aqui..." required>
+            </label>
 
-    <form class="form js-form">
-        <label for="nome">Nome
-            <input class="form-field js-field" type="text" name="nome" id="nome" maxlength="120"placeholder="Digite o nome da pessoa aqui, por exemplo: João ou Maria"  required>
-        </label>
+            <label for="data">Data de Nascimento
+                <input class="form-field js-field" type="date" name="data" id="data" required>
+            </label>
 
-        <label for="data">Data de Nascimento
-            <input class="form-field js-field" type="date" name="data" id="data" required>
-        </label>
+            <button type="submit" class="form-button" id="enviarButton">Enviar</button>
+        </form>
 
-        <button class="form-button">Enviar</button>
-    </form>
+        <table>
+            <thead>
+                <td>Nome</td>
+                <td>Data</td>
+                <td>Botão</td>
+            </thead>
+            <tbody class="js-tabela">
 
+            </tbody>
+        </table>
+
+    </main>
+
+    <footer>
+        <p>Feito com carinho por MaJu &copy; 2024</p>
+        <a href="http://github.com/MaJu-2440" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+        <a href="http://x.com/pfsju2" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="http://linkedin.com/mariajuliapachecofreitas" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="http://instagram.com/majupfs" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    </footer>
     <script src="form.js"></script>
 </body>
 </html>

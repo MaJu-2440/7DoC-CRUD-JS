@@ -5,34 +5,65 @@
 }
 body {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     font-family: sans-serif;
+    background-image: linear-gradient(to bottom,
+    rgba(0, 0, 0, .7) 10%,
+    rgba(0, 0, 0, .1) 80%,
+    rgba(0, 0, 0, .7) 100%), url(assets/background_gl_page.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main {
+    margin: 0 auto;
+    width: 80%;
+}
+header {
+    color: white;
+    padding: 1.5em;
+    text-align: center;
 }
 .titulo {
     font-size: 2em;
-    font-weight: 600;
-
-    color: white;
-    background: lightskyblue;
-
-    padding: 2em;
-    text-align: center;
+    font-weight: 700;
+}
+.descricao {
+    margin-top: 1em;
+    font-size: .8em;
+    font-weight: 400;
+    line-height: 20px;
 }
 .form {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 50%;
+    width: 100%;
+    padding: 1em;
 
-    margin-left: 2rem;
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    backdrop-filter: blur(15px);
+
     margin-top: 2rem;
 }
 .form-field {
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(234, 228, 228);
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 16px;
+    background-color: transparent;
     padding: .8em;
     margin-top: .5em;
+    color: white;
+}
+.form-field::placeholder {
+    color: white;
 }
 label {
     display: flex;
@@ -40,12 +71,94 @@ label {
     font-size: 1em;
 }
 .form-button {
-    background-color: rgb(10, 171, 10);
+    background-color: blueviolet;
     color: white;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+
     font-weight: 600;
+    text-transform: uppercase;
 
     border: none;
-    border-radius: 5px;
+    border-radius: 18px;
     padding: 1em 1.5em;
-    width: fit-content;
+    width: 100%;
+    cursor: pointer;
+}
+.form-button:hover {
+    background-color: rgb(255, 170, 0);
+}
+
+table {
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 5px;
+
+    width: 100%;
+    margin-top: 2rem;
+
+    padding: .5em;
+    background-color: rgba(138,43,226, .8);
+    color: white;
+    font-size: .8em;
+    font-weight: 400;
+
+    text-align: center;
+}
+thead {
+    color: whitesmoke;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+.col-nome {
+    text-align: left;
+}
+table i:hover {
+    color: rgb(255, 170, 0);
+}
+
+footer {
+    text-align: center;
+    color: rgba(255, 255, 255, .8);
+    padding: 2em;
+    font-size: .8em;
+    font-weight: 400;
+
+    a {
+        color: blueviolet;
+        font-size: 1.5em;
+    }
+    a:hover {
+        color: rgb(255, 170, 0);
+    }
+}
+
+@media (min-width: 425px) {
+    main {
+        width: 70%;
+    }
+    table {
+        font-size: .9em;
+    }
+}
+@media (min-width: 768px) {
+    main {
+        width: 50%;
+    }
+    table {
+        font-size: 1em;
+    }
+}
+@media (min-width: 1024px) {
+    main {
+        width: 40%;
+    }
+}
+@media (min-width: 1440px) {
+    main {
+        width: 25%;
+    }
+}
+@media (min-width: 2560px) {
+    main {
+        width: 15%;
+    }
 }
